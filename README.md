@@ -1,1 +1,7 @@
 # BusolineaTest
+
+## Instalación
+
+```
+$ npm install
+```
