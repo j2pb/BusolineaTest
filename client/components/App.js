@@ -22,11 +22,11 @@ class App extends Component {
             <div className="container">
                 <Router>
                     <div>
-                        <ul class="nav">
-                            <li class="nav-item">
+                        <ul className="nav">
+                            <li className="nav-item">
                                 <Link to="/" className="nav-link active">Home</Link>
                             </li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <Link to="/about" className="nav-link">About</Link>
                             </li>
                         </ul>
