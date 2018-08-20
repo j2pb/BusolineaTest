@@ -1,20 +1,17 @@
 import React, { Component } from "react";
-import Input from "../components/presentational/Input";
-import Home from "../components/Home"
-import About from "../components/About"
+import Routes from "../components/Routes"
+import NewRoute from "./NewRoute"
+import NotFound from "./NotFound"
 import {
     BrowserRouter as Router,
     Route,
-    Link
+    NavLink,
+    Switch
 } from 'react-router-dom'
+
 class App extends Component {
     constructor() {
         super();
-
-        this.handleChange = this.handleChange.bind(this);
-    }
-    handleChange(event) {
-        this.setState({ [event.target.id]: event.target.value });
     }
     render() {
 
@@ -22,21 +19,24 @@ class App extends Component {
             <div className="container">
                 <Router>
                     <div>
-                        <ul className="nav">
+                        <ul className="nav nav-pills">
                             <li className="nav-item">
-                                <Link to="/" className="nav-link active">Home</Link>
+                                <NavLink to="/" exact={true} activeClassName="active" className="nav-link">Rutas</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link to="/about" className="nav-link">About</Link>
+                                <NavLink to="/newroute" activeClassName="active" className="nav-link">Crear nueva ruta</NavLink>
                             </li>
                         </ul>
-                        <hr />
-                        <Route exact path="/" component={Home} />
-                        <Route path="/about" component={About} />
+                        <Switch>
+                            <Route exact path="/" component={Routes} />
+                            <Route path="/newroute" component={NewRoute} />
+                            <Route component={NotFound} />
+                        </Switch>
                     </div>
                 </Router>
-            </div>
+            </div >
         );
     }
 }
+
 export default App;

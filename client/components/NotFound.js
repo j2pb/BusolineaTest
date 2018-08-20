@@ -4,7 +4,7 @@ import {
     Route,
     Link
 } from 'react-router-dom'
-class About extends Component {
+class NotFound extends Component {
     constructor() {
         super();
     }
@@ -12,9 +12,9 @@ class About extends Component {
 
         return (
             <div className="">
-                <h1>About</h1>
+                <h4 className="text-center">Not Found</h4>
             </div>
         );
     }
 }
-export default About;
+export default NotFound;
