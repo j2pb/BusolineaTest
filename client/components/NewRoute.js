@@ -4,12 +4,12 @@ class NewRoute extends Component {
     constructor() {
         super();
         this.state = {
-            id: 'a',
-            origin_id: 'a',
-            destination_id: 'a',
-            departure_time: 'a',
-            arrival_time: 'a',
-            company_name: 'a',
+            id: '',
+            origin_id: '',
+            destination_id: '',
+            departure_time: '',
+            arrival_time: '',
+            company_name: '',
             showMessage: false,
             success: false,
             msg: ''
